@@ -10,15 +10,8 @@ public class Usuario
 		this.codigo = codigo;
 		this.nome = nome;
 	}
+	
 
-	//public void emprestar(String emp, int cusuario, int clivro)
-	//{
-	//	System.out.println("Método de empréstimo - " + emp + " CódUser" + cusuario + " CódBook" + clivro);
-	//}
-	
-	
-	
-	
 	
 	//gets & sets
 	public int getCodigo() 
