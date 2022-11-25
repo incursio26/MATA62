@@ -7,19 +7,60 @@ import estadosLivros.Reservado;
 import estadosLivros.State;
 import usuarios.Aluno;
 import estadosUsuarios.IDevedor;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Scanner;
 
 
 public class Sistema implements IDevedor
-{
+{	
 	public static void main(String[] args) 
 	{
+		Date data = new Date();
+		Aluno Pedro = new Aluno(123, "Pedro");
+		Livro Livro = new Livro();
+		Livro.setCodigo(456);
+		Aluno Joao = new Aluno(456, "João");
+		Livro Kafka = new Livro();
+		Kafka.setCodigo(456);
+		Emprestar reserva = new Emprestar();
+		Scanner ler = new Scanner(System.in);
+		
+		
+		System.out.println("Informe uma palavra:\n");
+		String comando = ler.next();
+		
+		if(comando.substring(0,3).equals("emp"))
+		{	
+			reserva.emprestar(Pedro.getCodigo(), Livro.getCodigo(), data, data);
+			reserva.emprestar(Joao.getCodigo(), Kafka.getCodigo(), data, data);
+			reserva.getALCodUsr();
+		}
+		
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		/*Livro Livro = new Livro();
 		Devolver devolver = new Devolver(Livro);
 		Livro.getState();
 		Livro.setState(devolver);
 		Livro.getState();
-		*/
+		HERE GOES CLOSE COMMENT
 		
 		
 		Aluno Pedro = new Aluno(123, "Pedro");

@@ -5,17 +5,17 @@ import java.io.*;
 
 public class ServicoNotificacao 
 {
-	private final List<ServicoNotificacao> usuarios = mew;
-	
+	private List<ServicoNotificacao> usuarios 	= new ArrayList<ServicoNotificacao>();
+				  
 	public ServicoNotificacao()
 	{
 		usuarios = new ArrayList<>();
 	}
 	
-	public void inscrever(Ouvintes ouvinte)
-	{
-		usuarios.add(ouvinte);
-	}
+//	public void inscrever(Ouvintes ouvinte)
+//	{
+	//	usuarios.add(ouvinte);
+//	}
 	
 	public void desinscrever(Ouvintes ouvinte)
 	{
@@ -25,5 +25,10 @@ public class ServicoNotificacao
 	public void notificar()
 	{
 		usuarios.forEach(ouvinte -> ouvinte.update());
+	}
+
+	private Object update() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
